@@ -24,10 +24,10 @@ class _MainScreenState extends State<MainScreen> {
             child: TextField(
               controller: myController,
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                border: const OutlineInputBorder(),
                 labelText: 'Search',
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   onPressed: () async {
                     await viewModel.searchImage(myController.text);
                   },
