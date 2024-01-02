@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_search_fast_coding/ui/main_view_model.dart';
 import 'package:image_search_fast_coding/ui/widget/image_item_widget.dart';
+import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -11,10 +12,10 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   final myController = TextEditingController();
-  final viewModel = MainViewModel();
 
   @override
   Widget build(BuildContext context) {
+    final viewModel = context.watch<MainViewModel>();
     return Scaffold(
       body: SafeArea(
           child: Column(
