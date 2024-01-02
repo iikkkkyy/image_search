@@ -39,6 +39,7 @@ class _MainScreenState extends State<MainScreen> {
             width: 10,
           ),
           StreamBuilder<bool>(
+            initialData: false,
               stream: viewModel.isLoading,
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {
