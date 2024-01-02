@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:image_search_fast_coding/ui/main_screen.dart';
+import 'package:image_search_fast_coding/ui/main_view_model.dart';
+import 'package:provider/provider.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,9 @@ class MyApp extends StatelessWidget {
         hintColor: Colors.white
       ),
       darkTheme: ThemeData.dark(),
-      home: const MainScreen(),
+      home: ChangeNotifierProvider(
+          create: (_) => MainViewModel(),
+          child: const MainScreen()),
     );
   }
 }
