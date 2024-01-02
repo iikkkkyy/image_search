@@ -26,6 +26,12 @@ class _MainScreenState extends State<MainScreen> {
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),
                 labelText: 'Search',
+                labelStyle: const TextStyle(color: Colors.white),
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    width: 1, color: Colors.white
+                  )
+                ),
                 suffixIcon: IconButton(
                   icon: const Icon(Icons.search),
                   onPressed: () async {
