@@ -1,11 +1,11 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:image_search_fast_coding/data/model/image_model.dart';
 import 'package:image_search_fast_coding/data/repository/image_repository.dart';
 
-class MainViewModel {
+class MainViewModel extends ChangeNotifier {
 
-  // Todo Provider 변경
   final _repository = ImageRepository();
 
   List<ImageModel> _items = [];
@@ -16,9 +16,11 @@ class MainViewModel {
 
   Future<void> searchImage(String query) async {
     _isLoading.add(true);
+    notifyListeners();
 
     _items = await _repository.getImageItems(query);
 
+    notifyListeners();
     _isLoading.add(false);
 
   }
