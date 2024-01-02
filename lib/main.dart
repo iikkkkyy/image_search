@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:image_search_fast_coding/ui/widget/main_screen.dart';
+import 'package:image_search_fast_coding/ui/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
