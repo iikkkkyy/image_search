@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import 'package:image_search_fast_coding/data/dto/image_dto.dart';
 
